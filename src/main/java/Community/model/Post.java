@@ -2,32 +2,28 @@ package Community.model;
 
 import java.util.Date;
 
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+
+@Document(collection = "post")
 public class Post {
 
 	@Id
-	private String _id;
-	
-	private Date timestamp;
-	private String title;
+	public String _id;
 
-	private String body;
-	private String author;
-	private String category;
+	Date timestamp;
+	String title;
+	String body;
+	String author;
+	String category;
+	Integer voteScore;
+	Boolean deleted;
+	Integer commentCount;
 
-	private int voteScore;
 
-	private boolean deleted;
-
-	private int commentCount;
-
-	public Post(Date timestamp, String title, String body, String author, String category, int voteScore,
-			boolean deleted, int commentCount) {
-		super();
+	public Post(Date timestamp, String title, String body, String author, String category, Integer voteScore,
+			Boolean deleted, Integer commentCount) {
 		this.timestamp = timestamp;
 		this.title = title;
 		this.body = body;
@@ -78,11 +74,11 @@ public class Post {
 		this.category = category;
 	}
 
-	public int getVoteScore() {
+	public Integer VoteScore() {
 		return voteScore;
 	}
 
-	public void setVoteScore(int voteScore) {
+	public void setVoteScore(Integer voteScore) {
 		this.voteScore = voteScore;
 	}
 
@@ -94,14 +90,11 @@ public class Post {
 		this.deleted = deleted;
 	}
 
-	public int getCommentCount() {
+	public Integer getCommentCount() {
 		return commentCount;
 	}
 
-	public void setCommentCount(int commentCount) {
+	public void setCommentCount(Integer commentCount) {
 		this.commentCount = commentCount;
-	}
-	public String toString() {
-		return "Post Category: "+category +" Post Title:"+title+" Post Dec:"+body;
 	}
 }

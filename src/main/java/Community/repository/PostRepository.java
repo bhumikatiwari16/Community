@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import Community.model.Post;
 @Repository
-public interface PostRepository extends MongoRepository<Post, String> {
+public interface PostRepository extends MongoRepository<Post, Integer> {
 
 	public List<Post> findByCategory(String category);
 }

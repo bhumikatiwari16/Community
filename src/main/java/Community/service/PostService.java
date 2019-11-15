@@ -16,10 +16,8 @@ public class PostService {
 	private PostRepository postRepository;
 	
 		//Create operation
-		public Post create(Date timestamp, String title, String body, String author, String category, int voteScore,
-				boolean deleted, int commentCount) {
-			return postRepository.save(new Post(timestamp, title, body, author, category,  voteScore,
-					 deleted,  commentCount));
+		public Post create(Post post) {
+			return postRepository.save(post);
 		}
 		//Retrieve operation
 		public List<Post> getAll(){
