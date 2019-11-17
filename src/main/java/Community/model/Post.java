@@ -13,6 +13,26 @@ public class Post {
 	public String _id;
 
 	Date timestamp;
+	public String get_id() {
+		return _id;
+	}
+
+	public void set_id(String _id) {
+		this._id = _id;
+	}
+
+	public Boolean getDeleted() {
+		return deleted;
+	}
+
+	public void setDeleted(Boolean deleted) {
+		this.deleted = deleted;
+	}
+
+	public Integer getVoteScore() {
+		return voteScore;
+	}
+
 	String title;
 	String body;
 	String author;

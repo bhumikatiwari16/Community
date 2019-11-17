@@ -7,7 +7,8 @@ import org.springframework.stereotype.Repository;
 
 import Community.model.Post;
 @Repository
-public interface PostRepository extends MongoRepository<Post, Integer> {
+public interface PostRepository extends MongoRepository<Post, String> {
 
 	public List<Post> findByCategory(String category);
+	public Post findPostBy_id(String _id);
 }
