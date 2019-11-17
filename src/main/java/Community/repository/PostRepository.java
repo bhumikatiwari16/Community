@@ -10,5 +10,5 @@ import Community.model.Post;
 public interface PostRepository extends MongoRepository<Post, String> {
 
 	public List<Post> findByCategory(String category);
-	public Post findPostBy_id(String _id);
+	public Post findPostByid(String id);
 }

@@ -10,15 +10,15 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Post {
 
 	@Id
-	public String _id;
+	public String id;
 
 	Date timestamp;
 	public String get_id() {
-		return _id;
+		return id;
 	}
 
 	public void set_id(String _id) {
-		this._id = _id;
+		this.id = _id;
 	}
 
 	public Boolean getDeleted() {
